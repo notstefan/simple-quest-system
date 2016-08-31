@@ -4,7 +4,7 @@ simple quest system for lua
 
 #installation
 
-drop the questsys into your root folder and require it. it returns the quest system table.
+drop the questsys file into your root folder and require it. it returns the quest system table.
 
 ```lua
 local questsys = require('questsys')
