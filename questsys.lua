@@ -28,6 +28,16 @@ function questsys.new(questname, objectives, reward, description, location, leve
   }
 end
 
+function questsys.accept(questname)
+  for k, v in ipairs(questsys.quest) do
+    if v.questname == questname then
+      if not v.accepted then
+        v.accepted = true
+      end
+    else error("No such quest name!") end
+  end
+end
+
 function questsys.adv_obj(questname, objID, value)
   for k, v in ipairs(questsys.quest) do
     if v.questname == questname then
@@ -131,6 +141,7 @@ function questsys.turnin(questname, rejectMsg)
     if v.questname == questname then
       for _, r in ipairs(questsys.quest[k].objectives) do
         if r.value == r.maxValue then
+          v.completed = true
           v.reward()
         else return rejectMsg end
       end
