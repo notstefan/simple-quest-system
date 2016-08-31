@@ -20,12 +20,12 @@ local questsys = require('questsys')
 --  -objectives table formatting and values:
 --    {{objid = "objid1", desc = "desc1", maxvalue = maxvalue1}, 
 --    {objid = "objid2", desc = "desc2", maxvalue = maxvalue2}, etc.}
---@rewards - rewards function, called when turning in completed quest
+--@reward - rewards function, called when turning in completed quest
 --@description (optional) - quest description
 --@location (optional) - quest location
 --@level (optional) - quest level
 --@questgiver (optional) - name of quest giver
-questsys.new(questname, objectives, rewards, description, location, level, questgiver)
+questsys.new(questname, objectives, reward, description, location, level, questgiver)
 
 --usage - accepts a quest
 --@questname - the name of the quest
