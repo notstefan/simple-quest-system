@@ -27,6 +27,10 @@ local questsys = require('questsys')
 --@questgiver (optional) - name of quest giver
 questsys.new(questname, objectives, rewards, description, location, level, questgiver)
 
+--usage - accepts a quest
+--@questname - the name of the quest
+questsys.accept(questname)
+
 --usage - increase objective value
 --@questname - name of quest
 --@objID - ID of the objective
